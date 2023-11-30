@@ -1,0 +1,112 @@
+<style>
+  /* Custom styles for the toggler icon lines */
+  .navbar-toggler-icon-lines {
+    background-color: lightgray; /* Set your desired color */
+  }
+</style>
+
+<nav class="navbar navbar-expand-lg bg-dark py-3">
+  <div class="container-fluid">
+    <button
+      class="navbar-brand btn btn-link text-white fs-5 fw-bold"
+      (click)="navigateTo('home')"
+    >
+      TAJ-KIRANA STORE
+    </button>
+    <button
+      class="navbar-toggler border-white"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      (click)="toggleNavbar()"
+    >
+      <span class="navbar-toggler-icon navbar-toggler-icon-lines"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <button
+            class="nav-link active text-white fs-5 text-light"
+            (click)="navigateTo('home')"
+          >
+            HOME
+          </button>
+        </li>
+        <li class="nav-item dropdown fs-5">
+          <button
+            class="nav-link dropdown-toggle text-white fs-5"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            PRODUCTS
+          </button>
+          <ul class="dropdown-menu bg-dark">
+            <li>
+              <button
+                class="dropdown-item text-white"
+                (click)="navigateTo('fruits')"
+              >
+                FRUITS & VEGETABLES
+              </button>
+            </li>
+            <li>
+              <button
+                class="dropdown-item text-white"
+                (click)="navigateTo('foodgrains')"
+              >
+                FOODGRAINS,OIL & MASALA
+              </button>
+            </li>
+            <li>
+              <button
+                class="dropdown-item text-white"
+                (click)="navigateTo('snacks')"
+              >
+                SNACKS
+              </button>
+            </li>
+            <li>
+              <button
+                class="dropdown-item text-white"
+                (click)="navigateTo('beverages')"
+              >
+                BEVERAGES
+              </button>
+            </li>
+            <li>
+              <button
+                class="dropdown-item text-white"
+                (click)="navigateTo('eggs')"
+              >
+                EGGS,BAKERY & DAIRY
+              </button>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <button
+            class="nav-link text-white fs-5"
+            (click)="navigateTo('contacts')"
+          >
+            CONTACT-US
+          </button>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-success text-white" type="submit">
+          Search
+        </button>
+      </form>
+    </div>
+  </div>
+</nav>
