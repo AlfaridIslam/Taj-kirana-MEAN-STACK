@@ -16,6 +16,12 @@ export class NavbarComponent implements OnInit {
   }
 
   navigateTo(route: string) {
-    this.router.navigate([route]);
+    if (route === 'beverages') {
+      // Navigate to the 'beverages' component
+      this.router.navigate(['/beverages']);
+    } else {
+      // For other routes, use the default navigation
+      this.router.navigate([route]);
+    }
   }
 }
