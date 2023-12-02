@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './Navbar/navbar.component';
 import { SlidersComponent } from './sliders/sliders.component';
-import { Card1Component } from './card1/card1.component';
 import { Card2Component } from './card2/card2.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
@@ -21,7 +20,6 @@ import { ContactsComponent } from './contacts/contacts.component';
     AppComponent,
     NavbarComponent,
     SlidersComponent,
-    Card1Component,
     Card2Component,
     FooterComponent,
     HomeComponent,
@@ -30,13 +28,10 @@ import { ContactsComponent } from './contacts/contacts.component';
     SnacksComponent,
     BeveragesComponent,
     EggsComponent,
-    ContactsComponent
+    ContactsComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
