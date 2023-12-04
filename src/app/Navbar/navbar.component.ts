@@ -1,3 +1,4 @@
+// navbar.component.ts
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -13,19 +14,31 @@ export class NavbarComponent implements OnInit {
 
   toggleNavbar() {
     // Add any toggle logic if needed
+    console.log('Navbar toggled'); // Placeholder, add your logic here
   }
 
   navigateTo(route: string) {
-    if (route === 'beverages') {
-      // Navigate to the 'beverages' component
-      this.router.navigate(['/beverages']);
-    }
-    if (route === 'home') {
-      // Navigate to the 'beverages' component
-      this.router.navigate(['/']);
-    } else {
-      // For other routes, use the default navigation
-      this.router.navigate([route]);
+    switch (route) {
+      case 'home':
+        // Navigate to the 'home' component
+        this.router.navigate(['/']);
+        break;
+      case 'products/fruits':
+      case 'products/foodgrains':
+      case 'products/snacks':
+      case 'products/beverages':
+      case 'products/eggs':
+        // Navigate to the respective product category components
+        this.router.navigate([route]);
+        break;
+      case 'contacts':
+        // Navigate to the 'contacts' component
+        this.router.navigate(['/contacts']);
+        break;
+      default:
+        // For other routes, use the default navigation
+        this.router.navigate([route]);
+        break;
     }
   }
 }
